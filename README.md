@@ -1,32 +1,38 @@
-# Astro Developer Portfolio Template
-A minimal, easy-to-customize developer portfolio template built with [Astro](https://astro.build/) and [TailwindCSS](https://tailwindcss.com/). No JavaScript in final build.
+# Hossam Abubakr - Personal Portfolio
 
-## Demo
-Check out a real-world example: [devidev.io](https://devidev.io)
+A modern, developer-focused personal portfolio built with [Astro](https://astro.build/) and [TailwindCSS](https://tailwindcss.com/). Features a code editor-inspired design with file-based navigation.
 
-![Astro Developer Portfolio Template - About Preview | devi|dev|io](assets/preview-about.png)
+## Live Demo
 
-![Astro Developer Portfolio Template - Projects Preview | devi|dev|io](assets/preview-projects.png)
+Visit the live portfolio: [hossam.dev](https://hossam.dev)
+
+## About This Portfolio
+
+This portfolio showcases my work as a Software Engineering Team Lead with 8+ years of experience in full-stack development, team leadership, and cloud technologies. The design mimics a code editor interface with file tabs and syntax highlighting.
 
 ## Features
-- No bundled JavaScript – optimized for performance and speed.
-- Fully responsive – mobile-friendly and adaptable across all devices.
-- SEO & Social Media Ready – includes OpenGraph, Twitter, and DublinCore metadata.
-- 100/100 Google PageSpeed Score – for both mobile and desktop.
-- Code highlighting – clean and readable syntax with [Shiki](https://github.com/shikijs/shiki).
-- Developer Portfolio & Projects Showcase – display your work with ease.
-- Code Editor-Inspired Design – modern and developer-friendly aesthetics.
+
+- **Code Editor Interface** – File-based navigation with tabs (about.ts, resume.html, README.md)
+- **Syntax Highlighting** – Clean code display with Astro's built-in Code component
+- **No JavaScript Bundle** – Optimized for performance and speed
+- **Fully Responsive** – Mobile-friendly design that works on all devices
+- **SEO Optimized** – Complete OpenGraph, Twitter, and DublinCore metadata
+- **Personal Content** – Bookshelf, learning journey, and personal interests
+- **Professional Showcase** – Technical skills, experience, and achievements
 
 ## Tech Stack
-- [Astro](https://astro.build/)
-- [TailwindCSS](https://tailwindcss.com/)
-- [Shiki](https://github.com/shikijs/shiki)
+
+- [Astro](https://astro.build/) - Static site generator
+- [TailwindCSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [Astro Code Component](https://docs.astro.build/en/guides/components/#astro-components) - Syntax highlighting
+- [astro-compress](https://github.com/astro-community/astro-compress) - Asset optimization
+- [@astrojs/sitemap](https://docs.astro.build/en/guides/integrations-guide/sitemap/) - Sitemap generation
 
 ## Getting Started
 
 ```sh
 # 1. Clone the repository
-git clone https://github.com/devidevio/astro-developer-portfolio .
+git clone https://github.com/hossamabubakr/personal-portfolio.git
 
 # 2. Install dependencies
 npm install
@@ -37,37 +43,64 @@ npm run dev
 # 4. Build for production
 npm run build
 
-# Deploy the contents of the `./dist` folder wherever you like.
+# 5. Preview the production build
+npm run preview
 ```
 
+## Project Structure
+
+```grep
+src/
+├── components/
+│   ├── ContentAbout.astro      # TypeScript code showcase
+│   ├── ContentResume.astro     # HTML resume format
+│   ├── ContentReadme.astro     # Personal markdown content
+│   ├── Profile.astro           # Profile information
+│   └── Contact.astro           # Contact details
+├── layouts/
+│   └── Layout.astro            # Main layout with SEO
+└── pages/
+    └── index.astro             # Homepage with tab navigation
+```
+
+## Content Sections
+
+### 📄 about.ts
+
+- TypeScript interface showcasing technical skills and experience
+- Professional profile with quantified achievements
+- Technology stack and expertise areas
+
+### 📄 resume.html  
+
+- Comprehensive resume in HTML format
+- Professional experience and career highlights
+- Education and technical skills
+
+### 📄 README.md
+
+- Personal learning journey and interests
+- Current bookshelf with summaries
+- Technologies being learned
+- Personal goals and aspirations
+
 ## Customization
-### Site & Domain Configuration
-- Modify `astro.config.mjs` to update your `site` settings, including metadata for SEO.
 
-### Theme Customization
-- Adjust the primary theme color in `tailwind.config.js`, to fit your branding.
+- Update `src/components/Profile.astro` with your details
+- Modify `src/layouts/Layout.astro` for SEO and metadata
+- Replace `/src/assets/profile.jpg` with your photo
 
-### Updating Content & SEO
-Edit the **Frontmatter** variables in these files:
-- `src/layouts/Layout.astro` – General page info (title, SEO, etc.)
-- `src/components/Socials.astro` – Update your social media links.
-- `src/components/Profile.astro` – Personal profile information.
-- `src/components/ContentProjects.astro` – Projects/portfolio section content.
-- `src/components/ContentAbout.astro` – About section content.
+### Content Updates
 
-### Profile Picture
-- Replace `/src/assets/profile.png` with your own image.
+- Edit `src/components/ContentAbout.astro` for technical showcase
+- Update `src/components/ContentResume.astro` for resume content
+- Modify `src/components/ContentReadme.astro` for personal content
 
-### Logo & OpenGraph Image
-- Update these files:
-  - `/public/img/logo.svg` (your logo)
-  - `/public/img/meta.png` (your OpenGraph image)
+### Styling
 
-Need a free OpenGraph image?
-- https://tailwind-generator.com/og-image-generator/generator
-
-### Sitemap & Robots.txt
-- Adjust `/public/robots.txt` to match your domain.
+- Adjust primary color in `tailwind.config.js`
+- Customize fonts and spacing in component styles
 
 ## ⭐ Contributing
+
 Feel free to fork, customize, and contribute to this project. If you find it useful, leaving a star would be greatly appreciated.
