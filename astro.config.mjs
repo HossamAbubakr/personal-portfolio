@@ -7,7 +7,7 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
     output: 'static',
     trailingSlash: 'always',
-    site: 'https://devidev.io',
+    site: 'https://hossam.dev',
 
     // Single page, no prefetch needed
     prefetch: false,
@@ -29,7 +29,7 @@ export default defineConfig({
                     removeEmptyAttributes: true,
                     // removeEmptyElements: true, // It removes sometimes SVGs
                     removeRedundantAttributes: true
-                },
+                }
             },
             JavaScript: {
                 'terser': {
