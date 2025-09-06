@@ -1,119 +1,66 @@
 ---
-import { Code } from 'astro:components';
+import { Code } from "astro:components";
 
-const code = `interface Developer {
-    name: string;
-    skills: string[];
-    interests: string[];
+const code = `// Developer profile
+const me = {
+  name: 'Hossam Abubakr',
+  skills: Object.values(techStack).flat(),
+  interests: [
+    'Open Source', 'Security', 'Performance', 'Scalability',
+    'AI', 'Writing', 'Gaming', 'Music', 'Photography',
+    'Travel', 'Food', 'Books', 'Movies', 'TV', 'Technology',
+  ],
 };
 
-interface TechStack {
-    devOps: string[];
-    backend: string[];
-   frontend: string[];
-};
-
-type ContactType = 'github' | 'twitter' | 'linkedIn' | 'xing' | 'email';
-
-const techStack: TechStack = {
-    devOps: [
-        'GitLab',
-        'GitHub',
-        'Cloudflare',
-        'Docker'
-    ],
-    frontend: [
-        'Angular',
-        'JavaScript',
-        'TypeScript',
-        'TailwindCSS',
-        'PrimeNG',
-        'Astro',
-        'Ionic',
-        'Stencil',
-        'Capacitor',
-        'SCSS',
-        'Markdown',
-        'WordPress'
-    ],
-    backend: [
-        'Supabase',
-        'Node.js',
-        'Bun',
-        'Deno',
-        'PostgreSQL',
-        'MySQL',
-        'S3 Storage',
-        'Resend'
-    ]
-};
-
-// Developer profile
-const me: Developer = {
-    name: 'Dejan Vi.',
-    skills: [
-        ...techStack.devOps,
-        ...techStack.backend,
-        ...techStack.frontend
-    ],
-    interests: [
-        'Open Source',
-        'Security',
-        'Privacy',
-        'Performance',
-        'Self-Hosting',
-        'Networking'
-    ]
-};
+// Tech stack
+const techStack = {
+  devOps: ['Git', 'CI/CD', 'Jenkins', 'CircleCI', 'Docker', 'Kubernetes'],
+  frontend: ['React', 'Vue.js', 'Next.js', 'TypeScript', 'TailwindCSS'],   
+  backend: ['Node.js', 'Express.js', 'PostgreSQL', 'MongoDB', 'MySQL', 'REST APIs'],   
+  cloud: ['AWS', 'Google Cloud', 'Microsoft Azure', 'Cloudflare', 'Kafka']   
+} as const;
 
 // Contact function
-const contact = (type: ContactType): string => {
-    switch (type) {
-        case 'github':
-            return 'https://github.com/devidevio';
-        case 'twitter':
-            return 'https://x.com/devidev_io';
-        case 'linkedIn':
-            return 'https://www.linkedin.com/in/dejan-vi';
-        case 'xing':
-            return 'https://www.xing.com/profile/Dejan_Vintonjiv';
-        case 'email':
-            return 'hi@devidev.io';
-        default:
-            return 'Send fax.';
-    }
+interface ContactType {
+  github: string;
+  bluesky: string;
+  linkedIn: string;
+  email: string;
+}
+
+const contacts: Record<ContactType, string> = {
+  github: 'https://github.com/hossamabubakr',
+  bluesky: 'https://bsky.app/profile/hossamabubakr.bsky.social',
+  linkedIn: 'https://www.linkedin.com/in/hossamabubakr',
+  email: 'hossam.abubakr@gmail.com',
 };
 
+const contact = (type: ContactType) => contacts[type] ?? 'Send fax.';
+};
 `;
 ---
 
-<Code
-    code={code}
-    lang="js"
-    wrap={true}
-/>
+<Code code={code} lang="js" wrap={true} />
 
 <style is:global>
+  /* Custom styling for code block line numbers */
+  pre.astro-code {
+    @apply bg-transparent !important;
+  }
 
-    /* Custom styling for code block line numbers */
-    pre.astro-code {
-        @apply bg-transparent !important;
-    }
+  pre.astro-code code {
+    @apply block;
+    counter-reset: step;
+    counter-increment: step 0;
+  }
 
-    pre.astro-code code {
-        @apply block;
-        counter-reset: step;
-        counter-increment: step 0;
-    }
+  pre.astro-code code .line {
+    @apply relative;
+  }
 
-    pre.astro-code code .line {
-        @apply relative;
-    }
-
-    pre.astro-code code .line::before {
-        content: counter(step);
-        counter-increment: step;
-        @apply text-gray-600 pr-2;
-    }
-
+  pre.astro-code code .line::before {
+    content: counter(step);
+    counter-increment: step;
+    @apply text-gray-600 pr-2;
+  }
 </style>

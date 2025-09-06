@@ -1,0 +1,267 @@
+---
+const cvData = {
+  areas_of_expertise: [
+    "Software Development Life Cycle",
+    "Software Architectural Design",
+    "Test Driven Development",
+    "Object-Oriented Programming",
+    "Single Page App Development",
+    "Scrum Methodologies",
+    "JavaScript Frameworks",
+    "JavaScript/Typescript",
+    "Coding Standards",
+    "Backend Development",
+    "Cloud Development",
+    "Database Design",
+  ],
+  technical_skills: [
+    "ReactJS",
+    "Vue.JS",
+    "NodeJS",
+    "Express",
+    "ExpressJS",
+    "Agile",
+    "API",
+    "AWS",
+    "CI/CD",
+    "CSS",
+    "Docker",
+    "Git",
+    "Google Cloud",
+    "HTML5",
+    "JavaScript",
+    "Jenkins",
+    "Jest",
+    "Jira",
+    "JWT",
+    "Microsoft Azure",
+    "MongoDB",
+    "NPM",
+    "SQL",
+    "TDD",
+    "TypeScript",
+    "Web Security",
+    "Webpack",
+    "xState",
+  ],
+  experience: [
+    {
+      title: "Senior Software Engineer",
+      company: "Kaufland E-Commerce",
+      location: "Munich, Germany",
+      date: "August 2023 – Present",
+      tech_stack: [
+        "Vue.JS",
+        "Node.js",
+        "Express.js",
+        "TDD",
+        "CI/CD",
+        "ViTest",
+        "MongoDB",
+        "PostgreSQL",
+        "AWS",
+        "Kafka",
+      ],
+      responsibilities: [
+        "Develop e-commerce web applications using Vue.js for seamless user experiences and high performance.",
+        "Collaborate with cross-functional teams to design and implement innovative features.",
+        "Utilize expertise in frontend and backend to create scalable and responsive solutions.",
+        "Mentor junior developers and foster a culture of continuous learning.",
+        "Take ownership of the full software development lifecycle to deliver robust e-commerce solutions.",
+      ],
+    },
+    {
+      title: "Senior Software Engineer",
+      company: "Joyn GmbH",
+      location: "Munich, Germany",
+      date: "October 2022 – May 2023",
+      tech_stack: [
+        "React",
+        "Node.js",
+        "Express.js",
+        "TDD",
+        "CI/CD",
+        "Jest",
+        "MongoDB",
+        "PostgreSQL",
+        "AWS",
+        "Kafka",
+      ],
+      responsibilities: [
+        "Support multiple teams (OTT, Android, iOS, Web, CoreAPI) across projects.",
+        "Implement backend with Typescript, AWS Lambda, Kafka, and AWS services.",
+        "Build and maintain frontend with React and xState for optimal player performance.",
+        "Prepare project documentation and user guides.",
+      ],
+    },
+    {
+      title: "Full-Stack Lead",
+      company: "Udacity",
+      location: "Giza, Egypt",
+      date: "February 2021 – October 2022",
+      tech_stack: [
+        "React",
+        "Node.js",
+        "Express.js",
+        "Jest",
+        "TDD",
+        "CI/CD",
+        "PostgreSQL",
+        "AWS",
+        "Docker",
+        "CircleCI",
+      ],
+      responsibilities: [
+        "Led multiple full-stack teams across various projects.",
+        "Designed and developed curriculums and offered technical consultancy.",
+        "Implemented backend functionality with Node.js, Express.js, and TypeScript.",
+        "Supervised Full Stack Session Leads in Egypt, Saudi Arabia, and Africa.",
+      ],
+    },
+    {
+      title: "Senior Full-Stack Engineer",
+      company: "Unique Intelligent Co",
+      location: "Giza, Egypt",
+      date: "March 2019 – January 2021",
+      tech_stack: [
+        "React",
+        "Node.js",
+        "Express.js",
+        "Jest",
+        "TDD",
+        "CI/CD",
+        "PostgreSQL",
+        "AWS",
+        "Docker",
+        "CircleCI",
+      ],
+      responsibilities: [
+        "Formulated database schemas for various services.",
+        "Developed dashboards and UI components using React.",
+        "Mentored junior developers.",
+        "Enhanced performance and usability of existing projects.",
+      ],
+    },
+    {
+      title: "Software Engineer",
+      company: "DataTec Consultancy",
+      location: "Cairo, Egypt",
+      date: "November 2016 – January 2019",
+      tech_stack: [
+        "React",
+        "React Native",
+        "Node.js",
+        "Express.js",
+        "Jest",
+        "PostgreSQL",
+      ],
+      responsibilities: [
+        "Started as backend developer, transitioned to full stack.",
+        "Developed APIs using JavaScript, Node.js, and Express.",
+        "Delivered applications with strong UI/UX.",
+        "Trained in mobile development focusing on React Native.",
+      ],
+    },
+  ],
+  career_highlights: [
+    "Spearheaded a live streaming service projected to generate $2M in monthly profit.",
+    "Contributed to a media system serving 7M monthly users with React, Node, and Typescript.",
+    "Reduced code duplication reports by 93% and pipeline runtime by 60%.",
+    "Delivered cloud-based low-latency software integrating diverse teams.",
+    "Led MENA teams for high-profile projects including a $50M initiative with African governments.",
+    "Recognized as a top achiever in the FWD initiative (97%+ graduate rate).",
+    "Invited to meet the Egyptian Minister of Communications for outstanding contributions.",
+    "Launched 6 major international projects as part of expansion plans.",
+  ],
+  education: {
+    degree: "Bachelors of Information Systems",
+    institution: "Al-Madina University",
+    location: "Giza, Egypt",
+    year: 2017,
+  },
+};
+---
+
+<div class="space-y-6">
+  <!-- Areas of Expertise -->
+  <div class="border border-gray-700 rounded-lg p-4 bg-black">
+    <h3 class="text-lg font-semibold text-white mb-3">Areas of Expertise</h3>
+    <div class="flex flex-wrap gap-2">
+      {
+        cvData.areas_of_expertise.map((area) => (
+          <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm border border-gray-600">
+            {area}
+          </span>
+        ))
+      }
+    </div>
+  </div>
+
+  <!-- Technical Skills -->
+  <div class="border border-gray-700 rounded-lg p-4 bg-black">
+    <h3 class="text-lg font-semibold text-white mb-3">Technical Skills</h3>
+    <div class="flex flex-wrap gap-2">
+      {
+        cvData.technical_skills.map((skill) => (
+          <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm border border-gray-600">
+            {skill}
+          </span>
+        ))
+      }
+    </div>
+  </div>
+
+  <!-- Experience -->
+  <div class="space-y-4">
+    <h3 class="text-2xl font-bold text-white">Professional Experience</h3>
+
+    {
+      cvData.experience.map((exp) => (
+        <div class="border border-gray-700 rounded-lg p-4 bg-black">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+            <h4 class="text-lg font-semibold text-white">{exp.title}</h4>
+            <span class="text-sm text-gray-400">{exp.date}</span>
+          </div>
+          <p class="text-primary mb-2">
+            {exp.company} • {exp.location}
+          </p>
+
+          <div class="mb-3">
+            <h5 class="text-sm font-medium text-white mb-2">Tech Stack:</h5>
+            <div class="flex flex-wrap gap-2">
+              {exp.tech_stack.map((tech) => (
+                <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded text-xs border border-gray-600">
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <ul class="list-disc list-inside space-y-1 text-sm text-gray-300">
+            {exp.responsibilities.map((resp) => (
+              <li>{resp}</li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+
+  <!-- Career Highlights -->
+  <div class="border border-gray-700 rounded-lg p-4 bg-black">
+    <h3 class="text-lg font-semibold text-white mb-3">Career Highlights</h3>
+    <ul class="list-disc list-inside space-y-2 text-sm text-gray-300">
+      {cvData.career_highlights.map((highlight) => <li>{highlight}</li>)}
+    </ul>
+  </div>
+
+  <!-- Education -->
+  <div class="border border-gray-700 rounded-lg p-4 bg-black">
+    <h3 class="text-lg font-semibold text-white mb-3">Education</h3>
+    <div class="text-sm text-gray-300">
+      <p class="text-white font-medium">{cvData.education.degree}</p>
+      <p>{cvData.education.institution}</p>
+      <p>{cvData.education.location} • {cvData.education.year}</p>
+    </div>
+  </div>
+</div>

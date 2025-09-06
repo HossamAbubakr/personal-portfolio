@@ -1,0 +1,212 @@
+---
+// Personal content data
+const personalData = {
+  currentBooks: [
+    {
+      title: "Engineering Management for the Rest of Us",
+      author: "Sarah Drasner",
+      summary:
+        "A practical guide for engineers transitioning into management roles, covering essential topics like one-on-one meetings, building trust, providing feedback, and managing team dynamics effectively.",
+    },
+    {
+      title: "Designing Data-Intensive Applications",
+      author: "Martin Kleppmann",
+      summary:
+        "A comprehensive guide to building reliable, scalable, and maintainable data systems, covering distributed systems, databases, and the principles behind modern data-intensive applications.",
+    },
+    {
+      title: "Refactoring: Improving the Design of Existing Code",
+      author: "Kent Beck and Martin Fowler",
+      summary:
+        "The definitive guide to refactoring techniques, showing how to improve code structure and design without changing its external behavior, with practical examples and step-by-step instructions.",
+    },
+  ],
+
+  learningTech: [
+    {
+      name: "Rust",
+      reason: "Systems programming and performance-critical applications",
+      resources: ["The Rust Book", "Rustlings exercises"],
+    },
+    {
+      name: "Go",
+      reason: "Microservices and concurrent programming",
+      resources: ["Go by Example", "Building microservices with Go"],
+    },
+    {
+      name: "WebAssembly",
+      reason: "High-performance web applications",
+      resources: ["MDN WebAssembly docs", "Practical examples"],
+    },
+    {
+      name: "Machine Learning",
+      reason: "AI integration in web applications",
+      resources: ["Fast.ai course", "TensorFlow.js"],
+    },
+  ],
+
+  interests: [
+    "Teaching & Mentoring",
+    "Gaming & Interactive Media",
+    "Travel & Cultural Exploration",
+    "Culinary Arts & Food Science",
+    "Fitness & Wellness",
+  ],
+
+  goals: [
+    "Contribute to major open source projects",
+    "Finish & Publish my WIP novel",
+    "Mentor more developers in the community",
+  ],
+};
+---
+
+<div class="markdown-document">
+  <!-- Markdown Content -->
+  <div class="markdown-body">
+    <h1>About Me - The Personal Side</h1>
+
+    <p>
+      Welcome to my personal space! This is where I share what I'm learning,
+      reading, and exploring beyond my professional work.
+    </p>
+
+    <h2>📚 Bookshelf</h2>
+
+    <p>
+      I'm passionate about continuous learning and always have a few books on my
+      reading list:
+    </p>
+
+    {
+      personalData.currentBooks.map((book) => (
+        <div class="book-item">
+          <h3>{book.title}</h3>
+          <p>
+            <strong>by</strong> {book.author}
+          </p>
+          <p>{book.summary}</p>
+        </div>
+      ))
+    }
+
+    <h2>🚀 Technologies I'm Learning</h2>
+
+    <p>
+      I believe in staying curious and exploring new technologies. Here's what
+      I'm currently diving into:
+    </p>
+
+    {
+      personalData.learningTech.map((tech) => (
+        <div class="tech-item">
+          <h3>{tech.name}</h3>
+          <p>
+            <strong>Why I'm learning it:</strong> {tech.reason}
+          </p>
+          <p>
+            <strong>Resources:</strong> {tech.resources.join(", ")}
+          </p>
+        </div>
+      ))
+    }
+
+    <h2>🎯 Personal Interests</h2>
+
+    <p>When I'm not coding, you'll find me:</p>
+
+    <ul class="interests-list">
+      {personalData.interests.map((interest) => <li>• {interest}</li>)}
+    </ul>
+
+    <h2>🌟 Goals & Aspirations</h2>
+
+    <p>Here are some things I'm working towards:</p>
+
+    <ul class="goals-list">
+      {personalData.goals.map((goal) => <li>• {goal}</li>)}
+    </ul>
+
+    <h2>💭 Random Thoughts</h2>
+
+    <blockquote>
+      <p>
+        "The best way to learn is to teach. The best way to grow is to share."
+      </p>
+    </blockquote>
+
+    <p>
+      I'm always excited to connect with fellow developers, share knowledge, and
+      learn from others. Whether it's discussing the latest tech trends, sharing
+      book recommendations, or just having a casual conversation about life and
+      code.
+    </p>
+  </div>
+</div>
+
+<style>
+  .markdown-document {
+    font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+  }
+
+  .markdown-body {
+    @apply p-6 text-gray-300 leading-relaxed;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .markdown-body h1 {
+    @apply text-2xl font-bold text-white mb-6;
+    color: #f43f5e;
+  }
+
+  .markdown-body h2 {
+    @apply text-xl font-semibold text-white mt-8 mb-4;
+    color: #f43f5e;
+  }
+
+  .markdown-body h3 {
+    @apply text-lg font-semibold text-white mt-6 mb-2;
+    color: #f43f5e;
+  }
+
+  .markdown-body p {
+    @apply mb-4 text-gray-300;
+  }
+
+  .markdown-body ul {
+    @apply mb-4 pl-6;
+  }
+
+  .markdown-body li {
+    @apply mb-2 text-gray-300;
+  }
+
+  .markdown-body blockquote {
+    @apply border-l-4 border-gray-600 pl-4 italic text-gray-400 mb-4;
+  }
+
+  .markdown-body blockquote p {
+    @apply mb-0;
+  }
+
+  .markdown-body a {
+    @apply text-primary hover:text-white underline;
+  }
+
+  .markdown-body hr {
+    @apply border-gray-600 my-6;
+  }
+
+  .book-item,
+  .tech-item {
+    @apply mb-4;
+  }
+
+  .interests-list,
+  .goals-list {
+    @apply space-y-2;
+  }
+
+  /* Remove markdown syntax prefixes for rendered look */
+</style>
