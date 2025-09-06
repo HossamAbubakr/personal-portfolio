@@ -17,12 +17,15 @@ const profile = {
   <div class="flex flex-col sm:flex-row gap-4 sm:items-center">
     <Picture
       src={ProfilePicture}
-      formats={["webp"]}
+      formats={["webp", "png"]}
       width={96}
       height={96}
       alt={"Profile picture " + profile.name}
       title={profile.name}
       class="w-24 h-24 rounded-xl object-cover mx-auto sm:mx-0"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
     />
 
     <div>

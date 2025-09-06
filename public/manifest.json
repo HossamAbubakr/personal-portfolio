@@ -1,0 +1,27 @@
+{
+  "name": "Hossam Abubakr - Software Engineering Team Lead",
+  "short_name": "hossam.dev",
+  "description": "Personal portfolio of Hossam Abubakr, Software Engineering Team Lead specializing in React, Vue.js, Node.js, and cloud technologies.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#f43f5e",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/img/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/img/meta.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["portfolio", "developer", "technology"],
+  "lang": "en",
+  "dir": "ltr"
+}

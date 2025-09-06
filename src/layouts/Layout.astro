@@ -69,7 +69,11 @@ const dublinCore = {
     <!-- End: Meta-Tags -->
 
     <!-- Start: DNS prefetch and preconnect -->
-    <!-- <link rel="preload" as="image" href="/img/logo.svg" /> -->
+    <link rel="preload" as="image" href="/img/logo.svg" />
+    <link rel="preconnect" href="https://github.com" />
+    <link rel="preconnect" href="https://www.linkedin.com" />
+    <link rel="preconnect" href="https://bsky.app" />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
     <!-- End: DNS prefetch and preconnect -->
 
     <!-- Start: Theming and Favicons -->
@@ -79,11 +83,14 @@ const dublinCore = {
       crossorigin="anonymous"
       href="/img/logo.svg"
     />
-    <!-- <link rel="alternate icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
-        <link rel="alternate icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
-        <link rel="icon" type="image/x-icon" href="/img/favicon/favicon.ico">
-        <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
-        <link rel="manifest" href="/img/favicon/site.webmanifest"> -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#f43f5e" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-title" content="hossam.dev" />
     <!-- End: Theming and Favicons -->
 
     <!-- Start: Misc meta tags -->
@@ -131,6 +138,50 @@ const dublinCore = {
     <meta name="description" content={seoDescription} />
     <meta name="abstract" content={seoDescription} />
     <meta name="keywords" content={seoKeywords} />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Hossam Abubakr",
+        "jobTitle": "Software Engineering Team Lead",
+        "description": "Passionate web developer focused on creating clean, efficient, and scalable web applications with a modern tech stack. Specialized in React, Vue.js, Node.js, and cloud technologies.",
+        "url": "https://hossam.dev",
+        "image": "https://hossam.dev/img/meta.png",
+        "sameAs": [
+          "https://github.com/hossamabubakr",
+          "https://www.linkedin.com/in/hossamabubakr",
+          "https://bsky.app/profile/hossamabubakr.bsky.social"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Cairo",
+          "addressCountry": "Egypt"
+        },
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Kaufland E-Commerce"
+        },
+        "knowsAbout": [
+          "React",
+          "Vue.js",
+          "Node.js",
+          "TypeScript",
+          "AWS",
+          "Docker",
+          "Kubernetes",
+          "Software Development",
+          "Team Leadership",
+          "Cloud Technologies",
+          "Web Development"
+        ],
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Al-Madina University"
+        }
+      }
+    </script>
   </head>
 
   <body class="min-h-[100vh] flex items-center justify-center p-4">

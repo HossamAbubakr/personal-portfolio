@@ -11,6 +11,11 @@ export default defineConfig({
 
     // Single page, no prefetch needed
     prefetch: false,
+    
+    // Performance optimizations
+    build: {
+        inlineStylesheets: 'auto',
+    },
 
     integrations: [
         tailwind(),
